@@ -1,3 +1,14 @@
+##Locals##
+locals {
+  common_tags = {
+    Environment = "Production"
+    Team        = "DevOps"
+    Name        = "Test-${var.instance_name}"
+  }
+  Service_name = "Web_server"
+}
+
+
 #######General example##########
 resource "aws_instance" "app_server" {
   ami           = "ami-063d43db0594b521b"
